@@ -1,12 +1,13 @@
 package com.codecool.emualapitvany.controller;
 
-import com.codecool.emualapitvany.service.AdminService;
-import com.codecool.emualapitvany.service.PatientService;
-import com.codecool.emualapitvany.service.TherapistService;
+import com.codecool.emualapitvany.model.user.Admin;
+import com.codecool.emualapitvany.model.user.Patient;
+import com.codecool.emualapitvany.model.user.Therapist;
+import com.codecool.emualapitvany.model.user.User;
+import com.codecool.emualapitvany.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Map;
 
 @CrossOrigin
 @RestController
@@ -14,23 +15,23 @@ import java.util.Map;
 @AllArgsConstructor
 public class RegistrationController {
 
-    private PatientService patientService;
-    private TherapistService therapistService;
-    private AdminService adminService;
+    private UserService userService;
 
     @PostMapping("/patient")
-    public void patientRegister(@RequestBody Map<String, String> data){
-        System.out.println(data);
-        patientService.createNewAdmin(data);
+    public User patientRegister(@RequestBody Patient user){
+        user.getRoles().add("PATIENT");
+        return userService.createNewUser(user);
     }
 
     @PostMapping("/therapist")
-    public void therapistRegister(@RequestBody Map<String, String> data){
-        therapistService.createNewTherapist(data);
+    public User therapistRegister(@RequestBody Therapist user){
+        user.getRoles().add("THERAPIST");
+        return userService.createNewUser(user);
     }
 
     @PostMapping("/admin")
-    public void adminRegister(@RequestBody Map<String, String> data){
-        adminService.createNewAdmin(data);
+    public User adminRegister(@RequestBody Admin user){
+        user.getRoles().add("ADMIN");
+        return userService.createNewUser(user);
     }
 }

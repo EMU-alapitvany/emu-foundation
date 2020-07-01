@@ -1,5 +1,8 @@
-package com.codecool.emualapitvany.model;
+package com.codecool.emualapitvany.model.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
@@ -16,6 +19,8 @@ public abstract class User {
 
     @Id
     @GeneratedValue
+    @JsonIgnore
+    @JsonProperty(access = Access.READ_ONLY)
     private Long Id;
 
     @NotEmpty
@@ -31,9 +36,12 @@ public abstract class User {
     private String email;
 
     @NotEmpty
+    @JsonIgnore
+    @JsonProperty(access = Access.WRITE_ONLY)
     private String password;
 
     @Singular
+    @JsonIgnore
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<String> roles = new HashSet<>();
 

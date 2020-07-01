@@ -1,7 +1,5 @@
 package com.codecool.emualapitvany;
 
-import com.codecool.emualapitvany.model.Patient;
-import com.codecool.emualapitvany.model.User;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,17 +21,7 @@ public class EmualapitvanyApplication {
     @Bean
     public CommandLineRunner init() {
         return args -> {
-             User user = Patient.builder()
-                    .username("userName")
-                    .firstName("firstName")
-                    .lastName("lastName")
-                    .email("email")
-                    .password("password")
-                    .parentFirstName("parentFirstName")
-                    .parentSecondName("parentSecondName")
-                    .build();
-
-            System.out.println(user);
+            System.out.println("DONE");
         };
     }
 
