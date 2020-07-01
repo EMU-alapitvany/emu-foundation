@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     @Autowired
-    private UserRepository patientRepository;
+    private UserRepository userRepository;
 
     public User createNewUser(User user){
-        return patientRepository.save(user);
+        return userRepository.save(user);
     }
 }
