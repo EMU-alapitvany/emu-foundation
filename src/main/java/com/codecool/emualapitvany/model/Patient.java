@@ -1,21 +1,25 @@
 package com.codecool.emualapitvany.model;
 
-import lombok.Data;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
+import net.bytebuddy.implementation.bind.annotation.SuperCall;
 
+import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 @Data
+@SuperBuilder
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class Patient extends User {
 
-    @NotEmpty
+    @NotNull
     private String parentFirstName;
 
-    @NotEmpty
+    @NotNull
     private String parentSecondName;
 
-    public Patient(Long Id, @NotEmpty String username, @NotEmpty String firstName, @NotEmpty String secondName, @NotEmpty String email, @NotEmpty String password) {
-        super(Id, username, firstName, secondName, email, password);
-        this.parentFirstName = parentFirstName;
-        this.parentSecondName = parentSecondName;
-    }
 }
+

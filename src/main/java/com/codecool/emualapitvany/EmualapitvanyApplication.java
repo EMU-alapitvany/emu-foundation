@@ -13,12 +13,22 @@ public class EmualapitvanyApplication {
         SpringApplication.run(EmualapitvanyApplication.class, args);
     }
 
-/*    @Bean
+    @Bean
     public CommandLineRunner init() {
         return args -> {
+             Patient user = Patient.builder()
+                    .username("userName")
+                    .firstName("firstName")
+                    .lastName("lastName")
+                    .email("email")
+                    .password("password")
+                    .parentFirstName("parentFirstName")
+                    .parentSecondName("parentSecondName")
+                    .build();
 
-        }
-    }*/
+            System.out.println(user);
+        };
+    }
 }
 
 

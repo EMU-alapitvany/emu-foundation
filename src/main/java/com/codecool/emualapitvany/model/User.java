@@ -1,33 +1,34 @@
 package com.codecool.emualapitvany.model;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
+@SuperBuilder
 public abstract class User {
 
     @Id
     @GeneratedValue
-    protected Long Id;
+    private Long Id;
 
     @NotEmpty
-    protected String username;
+    private String username;
 
     @NotEmpty
-    protected String firstName;
+    private String firstName;
 
     @NotEmpty
-    protected String secondName;
+    private String lastName;
 
     @NotEmpty
-    protected String email;
+    private String email;
 
     @NotEmpty
-    protected String password;
+    private String password;
 
 }
