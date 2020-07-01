@@ -40,7 +40,6 @@ public abstract class User extends UserCredentials {
     @NotEmpty
     private String email;
 
-
     @Singular
     @JsonIgnore
     @ElementCollection(fetch = FetchType.EAGER)
