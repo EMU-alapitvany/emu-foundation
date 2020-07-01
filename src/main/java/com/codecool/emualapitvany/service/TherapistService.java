@@ -16,7 +16,7 @@ public class TherapistService {
     @Autowired
     private TherapistRepository therapistRepository;
 
-    public Therapist createNewAdmin(Map<String, String> data){
+    public Therapist createNewTherapist(Map<String, String> data){
         Therapist therapist = Therapist.builder()
                 .firstName(data.get("firstName"))
                 .secondName(data.get("secondName"))
