@@ -1,6 +1,9 @@
 package com.codecool.emualapitvany.model.user;
 
-import lombok.*;
+import lombok.Data;
+import lombok.ToString;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
