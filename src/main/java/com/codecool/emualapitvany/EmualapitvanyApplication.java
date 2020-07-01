@@ -13,6 +13,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
+@EnableSwagger2
 public class EmualapitvanyApplication {
 
     public static void main(String[] args) {
@@ -22,7 +23,7 @@ public class EmualapitvanyApplication {
     @Bean
     public CommandLineRunner init() {
         return args -> {
-             Patient user = Patient.builder()
+             User user = Patient.builder()
                     .username("userName")
                     .firstName("firstName")
                     .lastName("lastName")
@@ -34,6 +35,15 @@ public class EmualapitvanyApplication {
 
             System.out.println(user);
         };
+    }
+
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+          .select()
+          .apis(RequestHandlerSelectors.any())
+          .paths(PathSelectors.any())
+          .build();
     }
 }
 
