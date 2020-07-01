@@ -4,13 +4,11 @@ import com.codecool.emualapitvany.service.AdminService;
 import com.codecool.emualapitvany.service.PatientService;
 import com.codecool.emualapitvany.service.TherapistService;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/registration")
 @AllArgsConstructor
@@ -22,6 +20,7 @@ public class RegistrationController {
 
     @PostMapping("/patient")
     public void patientRegister(@RequestBody Map<String, String> data){
+        System.out.println(data);
         patientService.createNewAdmin(data);
     }
 

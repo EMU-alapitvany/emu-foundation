@@ -3,13 +3,15 @@ package com.codecool.emualapitvany.model;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
-@NoArgsConstructor
+@Entity
 @SuperBuilder
+@NoArgsConstructor
 public abstract class User {
 
     @Id
@@ -30,5 +32,9 @@ public abstract class User {
 
     @NotEmpty
     private String password;
+
+    @Singular
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> roles = new HashSet<>();
 
 }
