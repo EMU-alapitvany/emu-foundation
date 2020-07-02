@@ -1,4 +1,4 @@
-package com.codecool.emualapitvany.model.user;
+package java.com.codecool.emualapitvany.model.user;
 
 import lombok.Data;
 import lombok.ToString;
