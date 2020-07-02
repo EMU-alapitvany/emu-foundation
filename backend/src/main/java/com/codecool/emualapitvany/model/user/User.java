@@ -1,4 +1,4 @@
-package java.com.codecool.emualapitvany.model.user;
+package com.codecool.emualapitvany.model.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
