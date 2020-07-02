@@ -1,9 +1,10 @@
 package com.codecool.emualapitvany.service;
 
-import com.codecool.emualapitvany.model.user.User;
-import com.codecool.emualapitvany.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.codecool.emualapitvany.model.user.User;
+import com.codecool.emualapitvany.repository.UserRepository;
 
 @Service
 public class UserService {

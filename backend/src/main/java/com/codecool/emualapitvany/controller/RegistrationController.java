@@ -1,12 +1,13 @@
 package com.codecool.emualapitvany.controller;
 
+import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
 import com.codecool.emualapitvany.model.user.Admin;
 import com.codecool.emualapitvany.model.user.Patient;
 import com.codecool.emualapitvany.model.user.Therapist;
 import com.codecool.emualapitvany.model.user.User;
 import com.codecool.emualapitvany.service.UserService;
-import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.*;
 
 
 @CrossOrigin
