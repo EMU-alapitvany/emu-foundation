@@ -1,4 +1,4 @@
-package com.codecool.emualapitvany.model.user;
+package com.codecool.emufoundation.model.user;
 
 import lombok.Data;
 import lombok.ToString;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotEmpty;
 
 @Data
 @Entity
@@ -15,9 +15,12 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-public class Therapist extends User {
+public class Patient extends User {
 
-    @NotNull
-    private float salary;
+    @NotEmpty
+    private String parentFirstName;
+
+    @NotEmpty
+    private String parentSecondName;
 
 }

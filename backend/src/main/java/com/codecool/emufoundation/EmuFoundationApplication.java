@@ -1,4 +1,4 @@
-package com.codecool.emualapitvany;
+package com.codecool.emufoundation;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,10 +12,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class EmualapitvanyApplication {
+public class EmuFoundationApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EmualapitvanyApplication.class, args);
+        SpringApplication.run(EmuFoundationApplication.class, args);
     }
 
     @Bean

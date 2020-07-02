@@ -1,7 +1,7 @@
-package com.codecool.emualapitvany.repository;
+package com.codecool.emufoundation.repository;
 
-import com.codecool.emualapitvany.model.user.Admin;
-import com.codecool.emualapitvany.model.user.User;
+import com.codecool.emufoundation.model.user.Admin;
+import com.codecool.emufoundation.model.user.User;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

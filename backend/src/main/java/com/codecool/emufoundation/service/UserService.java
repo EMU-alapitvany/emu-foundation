@@ -1,7 +1,7 @@
-package com.codecool.emualapitvany.service;
+package com.codecool.emufoundation.service;
 
-import com.codecool.emualapitvany.model.user.User;
-import com.codecool.emualapitvany.repository.UserRepository;
+import com.codecool.emufoundation.model.user.User;
+import com.codecool.emufoundation.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

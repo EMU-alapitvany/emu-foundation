@@ -1,10 +1,10 @@
-package com.codecool.emualapitvany;
+package com.codecool.emufoundation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EmualapitvanyApplicationTests {
+class EmuFoundationApplicationTests {
 
     @Test
     void contextLoads() {
