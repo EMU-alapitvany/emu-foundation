@@ -74,7 +74,7 @@ export default function SignUp(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component='h1' variant='h5'>
-          Sign up
+          Regisztráció
         </Typography>
         <ValidatorForm
           className={styleClasses.form}
@@ -156,12 +156,12 @@ export default function SignUp(props) {
             color='primary'
             className={styleClasses.submit}
           >
-            Sign Up
+            Fiók létrehozása
           </Button>
           <Grid container justify='flex-end'>
             <Grid item>
               <Link href='/' variant='body2'>
-                Already have an account? Sign in
+                Van már fiókja? Itt bejelentkezhet
               </Link>
             </Grid>
           </Grid>
