@@ -1,17 +1,15 @@
-package java.com.codecool.emualapitvany.service;
+package com.codecool.emualapitvany.service;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.codecool.emualapitvany.model.user.User;
+import com.codecool.emualapitvany.repository.UserRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.com.codecool.emualapitvany.model.user.User;
-import java.com.codecool.emualapitvany.repository.UserRepository;
-
 @Service
+@AllArgsConstructor
 public class UserService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public User createNewUser(User user){
         return userRepository.save(user);

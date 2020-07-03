@@ -1,7 +1,7 @@
-package java.com.codecool.emualapitvany.service;
-
-import static org.junit.jupiter.api.Assertions.*;
+package com.codecool.emualapitvany.service;
 
 class UserServiceTest {
+
+
 
 }
